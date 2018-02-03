@@ -49,5 +49,9 @@ class App extends CI_Controller{
 			);
 			echo $response;
 	}
+        
+	public function updatetask_date(){
 
+		echo json_encode(array('response'=>$this->appmodel->update_task_date($this->input->post('event_id'),$this->input->post('new_date'))));
+	}
 }

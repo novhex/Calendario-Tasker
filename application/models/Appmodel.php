@@ -16,7 +16,7 @@ class Appmodel extends CI_Model
 
 	public function addTask($title,$details,$date){
 		
-		$task_details = array('task_id'=>mt_rand(1,9999999999),
+		$task_details = array('task_id'=>bin2hex(openssl_random_pseudo_bytes(5)),
 					   'task_name'=>$title,
 					   'task_details'=>$details,
 					   'date'=>$date
@@ -36,6 +36,11 @@ class Appmodel extends CI_Model
 		return $this->db->delete('task');
 
 		
+	}
+
+	public function update_task_date($eventid,$newdate){
+
+		return $this->db->where('task_id',$eventid)->update('task',['date'=>$newdate]);
 	}
 
 	public function editTask($title,$details,$id){

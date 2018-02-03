@@ -1,4 +1,7 @@
 <div class="container" style="margin-top:70px;">
+    <h4>Click on any dates to add event or drag an existing event to another date</h4>
+    <br>
+    <br>
 	 <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
