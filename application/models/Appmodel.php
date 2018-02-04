@@ -16,7 +16,7 @@ class Appmodel extends CI_Model
 
 	public function addTask($title,$details,$date){
 		
-		$task_details = array('task_id'=>bin2hex(openssl_random_pseudo_bytes(5)),
+		$task_details = array('task_id'=>mt_rand(),
 					   'task_name'=>$title,
 					   'task_details'=>$details,
 					   'date'=>$date
